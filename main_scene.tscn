@@ -1,0 +1,118 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddqnvbcl4m7uo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o3jxj"]
+font_size = 28
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0f027"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="main_scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg_rect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9607843, 0.9607843, 0.8627451, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 50.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Logic Solver"
+label_settings = SubResource("LabelSettings_o3jxj")
+
+[node name="sentence_text_input" type="TextEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+placeholder_text = "Insert Sentence here"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+
+[node name="shortcuts" type="HBoxContainer" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="vars_shortcuts_vbox" type="VBoxContainer" parent="VBoxContainer/MarginContainer/shortcuts"]
+layout_mode = 2
+
+[node name="vars_shortcut_label" type="Label" parent="VBoxContainer/MarginContainer/shortcuts/vars_shortcuts_vbox"]
+layout_mode = 2
+text = "Vars Shortcuts"
+label_settings = SubResource("LabelSettings_0f027")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/shortcuts/vars_shortcuts_vbox"]
+layout_mode = 2
+
+[node name="a_button" type="Button" parent="VBoxContainer/MarginContainer/shortcuts/vars_shortcuts_vbox/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "a"
+
+[node name="b_button" type="Button" parent="VBoxContainer/MarginContainer/shortcuts/vars_shortcuts_vbox/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "b"
+
+[node name="c_button" type="Button" parent="VBoxContainer/MarginContainer/shortcuts/vars_shortcuts_vbox/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "c"
+
+[node name="operators" type="VBoxContainer" parent="VBoxContainer/MarginContainer/shortcuts"]
+layout_mode = 2
+
+[node name="operators_shortcut_label" type="Label" parent="VBoxContainer/MarginContainer/shortcuts/operators"]
+layout_mode = 2
+text = "Operators Shortcuts"
+label_settings = SubResource("LabelSettings_0f027")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/shortcuts/operators"]
+layout_mode = 2
+
+[node name="not_button" type="Button" parent="VBoxContainer/MarginContainer/shortcuts/operators/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "~"
+
+[node name="and_button" type="Button" parent="VBoxContainer/MarginContainer/shortcuts/operators/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "&"
+
+[node name="or_button" type="Button" parent="VBoxContainer/MarginContainer/shortcuts/operators/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "∨"
+
+[node name="if_button" type="Button" parent="VBoxContainer/MarginContainer/shortcuts/operators/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "→"
+
+[node name="iff_button" type="Button" parent="VBoxContainer/MarginContainer/shortcuts/operators/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "⇔"
